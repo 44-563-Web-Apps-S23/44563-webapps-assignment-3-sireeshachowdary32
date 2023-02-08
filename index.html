@@ -58,6 +58,14 @@
             <td>10 days</td>
         </tr>
         </table>
+        <hr>
+        <blockquote How to add custom fields to a WordPress Plugin></blockquote>
+        <pre><?php $songs = get_post_meta($post->ID, 'songs', false); ?>
+            <h3>This post inspired by:</h3>
+            <ul>
+                <?php foreach($songs as $song) {
+                    echo '<li>'.$song.'</li>';
+                } ?></pre>
     </body>
     
 </html>
